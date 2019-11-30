@@ -30,3 +30,4 @@ WORKDIR "/opt/minecraft"
 ENTRYPOINT [ "/opt/minecraft/server-start.sh" ]
 
 EXPOSE 25565
+EXPOSE 25575

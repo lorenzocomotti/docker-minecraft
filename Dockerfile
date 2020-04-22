@@ -1,4 +1,4 @@
-##Download base image ubuntu Centos 7
+##Download base image ubuntu Ubuntu 18 Bionic
 FROM ubuntu:bionic
 
 MAINTAINER Lorenzo Comotti

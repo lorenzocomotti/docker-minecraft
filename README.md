@@ -1,5 +1,5 @@
-# Terraria Server in Docker
-This repository contains the Dockerfile and associated assets for building a Minecraft server Docker image
+# Minecraft Server in Docker
+This repository contains the Dockerfile and associated assets for building a Minecraft server 1.15.2 Docker image
 
 ## Requirements
 #### Install docker

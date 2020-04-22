@@ -4,7 +4,7 @@ FROM ubuntu:bionic
 MAINTAINER Lorenzo Comotti
 
 ##Define the ENV variable
-ENV MINECRAFT_VERSION="1.14.4"
+ENV MINECRAFT_VERSION="1.15.2"
 ENV MINECRAFT_WORKDIRECTORY="/opt/minecraft/"
 
 ##Update Software repository
@@ -17,7 +17,7 @@ RUN apt install wget screen openjdk-11-jre-headless -y
 RUN mkdir /opt/minecraft
 
 ## Download Minecraft Server
-RUN wget https://launcher.mojang.com/v1/objects/3dc3d84a581f14691199cf6831b71ed1296a9fdf/server.jar -O /opt/minecraft/server.jar
+RUN wget https://launcher.mojang.com/v1/objects/bb2b6b1aefcd70dfd1892149ac3a215f6c636b07/server.jar -O /opt/minecraft/server.jar
 
 ##Copy coinfiguration File
 COPY eula.txt ${MINECRAFT_WORKDIRECTORY}

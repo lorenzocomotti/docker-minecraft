@@ -1,8 +1,13 @@
 # Minecraft Server in Docker
 This repository contains the Dockerfile and associated assets for building a Minecraft server 1.15.2 Docker image
 
-## Requirements
+### Requirements
 #### Install docker
+
+Fedora / Centos
+```
+yum install -y docker.io
+```
 
 Ubuntu / Debian
 
@@ -10,28 +15,22 @@ Ubuntu / Debian
 apt-get -y install docker.io
 ```
 
-Fedora / Centos
-```
-yum install -y docker.io
-```
-
-#### Start the service:
+#### Create a directory for your world file, configuration, and logs
 
 ```
-systemctl start docker
-```
-
-#### Create directory which will hold the server world data:
-
-```
-mkdir /data
+mkdir -p $HOME/minecraft/worlds
+mkdir -p $HOME/minecraft/configurations
 ```
 
 ## Create config file
 
-edit the `server.properties` file to customize server configuration   
+Create or edit the `$HOME/minecraft/configurations/server.properties` file to customize server configuration.  
 In this link you can find the official documentation: [https://minecraft-it.gamepedia.com/Server.properties](https://minecraft-it.gamepedia.com/Server.properties)
 
-## Mount Configuration
+## Start your docker container
 
-Mount configuration in container like configmap (kubernetes) or Volume (Docker only)
+```
+sudo docker run -it -p 25565:25565 -v $HOME/minecraft/worlds:/opt/minecraft/worlds -v $HOME/minecraft/configurations/serverconfig.txt:/opt/minecraft/serverconfig.txt --name="minecraft" lorenzocomotti/minecraft:latest
+```
+
+If you also want to use RCON, you must also expose the following port `25575`

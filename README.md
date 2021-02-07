@@ -30,7 +30,7 @@ In this link you can find the official documentation: [https://minecraft-it.game
 ## Start your docker container
 
 ```
-sudo docker run -it -p 25565:25565 -v $HOME/minecraft/worlds:/opt/minecraft/worlds -v $HOME/minecraft/configurations/serverconfig.txt:/opt/minecraft/serverconfig.txt --name="minecraft" lorenzocomotti/docker-minecraft:latest
+sudo docker run -it -p 25565:25565 -v $HOME/minecraft/worlds:/opt/minecraft/worlds -v $HOME/minecraft/configurations/serverconfig.txt:/opt/minecraft/serverconfig.txt --name="minecraft" lorenzocomotti/docker-minecraft:1.16.5
 ```
 
 If you also want to use RCON, you must also expose the following port `25575`

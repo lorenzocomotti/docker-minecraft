@@ -13,7 +13,7 @@ jobs:
           version: 19.03.13
       - run:
           name: "Build Container"
-          command: "docker build --tag lorenzocomotti/docker-minecraft:latest /app" 
+          command: "docker build --tag lorenzocomotti/docker-minecraft:1.19 /app" 
 
       - run: 
           name: "Push Image"

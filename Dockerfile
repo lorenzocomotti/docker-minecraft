@@ -8,7 +8,7 @@ ENV MINECRAFT_VERSION="1.19"
 ENV MINECRAFT_WORKDIRECTORY="/opt/minecraft/"
 
 ##Update Software repository and required pakages
-RUN apt update && apt -y upgrade && apt install -y wget screen openjdk-11-jre-headless 
+RUN apt update && apt -y upgrade && apt install -y wget screen openjdk-17-jre-headless 
 
 ##Create Work-Directory and Download Minecraft Server
 RUN mkdir /opt/minecraft && wget https://launcher.mojang.com/v1/objects/e00c4052dac1d59a1188b2aa9d5a87113aaf1122/server.jar -O /opt/minecraft/server.jar

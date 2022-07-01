@@ -19,4 +19,4 @@ jobs:
           name: "Push Image"
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-            docker push lorenzocomotti/docker-minecraft:latest
+            docker push lorenzocomotti/docker-minecraft:1.19

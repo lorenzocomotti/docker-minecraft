@@ -1,5 +1,5 @@
 # Minecraft Server in Docker
-This repository contains the Dockerfile and associated assets for building a Minecraft server 1.19 Docker image
+This repository contains the Dockerfile and associated assets for building a Minecraft server 1.21.5 Docker image
 
 ### Requirements
 #### Install docker
